@@ -1,0 +1,15 @@
+{
+  "name": "hs-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass ./style/index.scss ./dist/index.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.43.4"
+  }
+}

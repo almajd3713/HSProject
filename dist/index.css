@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 62.5%;
+  color: #eeeeee;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #25223f;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 90vw;
+  margin: auto;
+}
+
+.heading-container {
+  height: 120vh;
+  transition: all 1s;
+  opacity: 0;
+}
+
+.title-container {
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.title-container h1 {
+  font-size: 7rem;
+  font-weight: 100;
+  margin-bottom: 2rem;
+}
+.title-container h4 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #cccccc;
+}
+
+.header-img {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: grayscale(100%);
+}
+.header-img img {
+  width: 60%;
+  opacity: 0.05;
+}
+
+nav {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+  display: inline-block;
+  text-align: center;
+  padding: 0 1rem;
+  background-color: #cccccc;
+  border-radius: 2rem;
+  width: 80%;
+}
+nav .btn:link, nav .btn:visited {
+  display: inline-block;
+  font-size: 3rem;
+  color: black;
+  background-color: inherit;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  transition: all 0.3s;
+}
+nav .btn:hover {
+  background-color: darkslategray;
+  color: white;
+  transform: translateY(-6px);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.75);
+}
+nav .btn:active {
+  transform: translateY(-3px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.75);
+}
+nav .btn:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.definition-container {
+  height: 100vh;
+  text-align: center;
+}
+
+.definition-title {
+  font-size: 7.5rem;
+  margin-bottom: 2rem;
+}
+
+.definition-desc {
+  font-size: 2rem;
+  line-height: 150%;
+}
+.definition-desc::first-letter {
+  font-size: 300%;
+  float: left;
+  padding: 0.5rem 0.2rem;
+  margin-top: 1rem;
+}
+
+.definition-class {
+  margin-top: 3rem;
+  height: 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-column-gap: 3rem;
+}
+
+.definition-class .box {
+  background-color: #3a3561;
+  padding: 2rem;
+  transition: all 0.5s;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  outline: solid whitesmoke 5px;
+  animation: floatingBox 2s cubic-bezier(0.37, 0, 0.63, 1) alternate infinite;
+}
+.definition-class .box--header {
+  margin-top: 5rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.definition-class .box--content {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.definition-class .box h2 {
+  font-size: 3.5rem;
+  color: #cfcece;
+}
+.definition-class .box p {
+  font-size: 2rem;
+  line-height: 4rem;
+  padding: 0 1rem;
+}
+
+.definition-treatment {
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 7rem;
+  grid-column-gap: 7rem;
+}
+
+@keyframes floatingBox {
+  100% {
+    transform: translateY(-1rem);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+  }
+}
+.who-container {
+  position: relative;
+  height: 100%;
+  text-align: center;
+}
+.who-container .hbody-image {
+  filter: grayscale(100%);
+  opacity: 0.4;
+}
+.who-container .where-box {
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+  width: 20rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+  padding: 2rem;
+  background-color: #3a3561;
+}
+.who-container .where-box::before {
+  z-index: -1;
+  content: "";
+  width: 30rem;
+  height: 2rem;
+  clip-path: polygon(0% 20%, 85% 20%, 85% 0%, 100% 50%, 85% 100%, 85% 80%, 0% 80%);
+  background: green;
+  position: absolute;
+  top: -2rem;
+  left: 20rem;
+  transform: rotate(-15deg);
+}
+.who-container .who {
+  background: #3a3561;
+  padding: 3rem;
+  text-align: center;
+}
+.who-container .who .selection {
+  width: 40rem;
+  background: #6f64be;
+  margin: auto;
+  border-radius: 0.5rem;
+  font-size: 1.75rem;
+  margin-bottom: 3rem;
+}
+.who-container .who .selection a:link, .who-container .who .selection a:visited {
+  text-decoration: none;
+  color: inherit;
+  width: 8rem;
+  height: 100%;
+  padding: 1rem 1rem;
+  cursor: default;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.who-container .who .selection a:link:hover, .who-container .who .selection a:visited:hover {
+  background: #9088cd;
+  color: black;
+  transform: translateY(-0.5rem);
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
+}
+.who-container .who .who-desc .peopleGroupImg {
+  margin: auto;
+  width: 40rem;
+  height: 40rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-image: linear-gradient(#f4de62, #e59534), url(../../assets/Challenges-of-elderly-smaller-1024x683.png);
+}
+.who-container .who .who-desc .peopleGroupImg2 {
+  background-image: linear-gradient(#6df04c, #26ba73), url(../../assets/image-20170210-23350-zxv9gt.jpg);
+}
+.who-container .who .who-desc img {
+  width: 40rem;
+}
+.who-container .who .who-desc p {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+.symptoms-container {
+  height: 60rem;
+}
+.symptoms-container .card-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  column-gap: 1rem;
+}
+.symptoms-container .card-container .card {
+  text-align: center;
+  transition: all 0.3s;
+}
+.symptoms-container .card-container .card:nth-of-type(2) {
+  transform: scale(1.15);
+}
+.symptoms-container .card-container .card img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.symptoms-container .card-container .card .desc {
+  width: 100%;
+  height: 5rem;
+  background-color: green;
+  font-size: 3.5rem;
+  font-weight: 100;
+  padding: 1rem 0;
+  transform: translateY(-20rem);
+  transition: all 0.3s ease-out;
+}
+.symptoms-container .card-container .card:hover {
+  transform: scale(1.2);
+  z-index: 5;
+}
+.symptoms-container .card-container .card:hover .desc {
+  transform: translateY(0);
+}
+
+.treatment--box {
+  outline: none;
+  padding-top: none;
+}
+.treatment--header {
+  position: relative;
+  height: 5rem;
+  background-color: red;
+}
+.treatment--header::before {
+  z-index: 5;
+  content: "";
+  width: 10rem;
+  height: 10rem;
+  clip-path: circle(50% at 50% 50%);
+  background: green;
+  position: absolute;
+  top: -5rem;
+  left: -5rem;
+}
+
+/*# sourceMappingURL=index.css.map */

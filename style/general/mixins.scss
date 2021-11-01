@@ -1,0 +1,17 @@
+@mixin genBox($backCol, $border-rad, $outline) {
+  background-color: $backCol;
+  padding: 2rem;
+  transition: all .5s;
+  border-radius: $border-rad;
+  box-shadow: 0 .5rem 1rem rgba(black, .3);
+  outline: $outline;
+  
+  h2 {
+    font-size: 3.5rem;
+  }
+  p {
+    font-size: 2rem;  
+    line-height: 4rem;
+    padding: 0 1rem;
+  }    
+}

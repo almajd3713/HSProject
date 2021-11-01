@@ -1,0 +1,37 @@
+.treatment {
+    &--box {
+        outline: none;
+        padding-top: none;
+    }
+
+    &--header {
+        position: relative;
+        height: 5rem;
+        &::before {
+            z-index: 5;
+            content: "";
+            width: 10rem;
+            height: 10rem;
+            clip-path: circle(50% at 50% 50%);
+
+            background: green;
+            position: absolute;
+            top: -5rem;
+            left: -5rem;
+            
+        }
+        background-color: red;
+    }
+
+    // &--num {
+
+    // }
+
+    // &--heading {
+
+    // }
+
+    // &--content {
+
+    // }
+}
