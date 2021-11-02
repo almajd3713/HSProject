@@ -14,6 +14,9 @@ export default (btn, components, other) => {
   btn[1].onclick = () => {append(components[2]); setTimeout(() => {
     other[0]()
   }, 200);}
-  btn[2].onclick = () => append(components[3])
-  btn[3].onclick = () => append(components[4])
+  btn[2].onclick = () => append(components[3]);
+  btn[3].onclick = () => append(components[4]);
+  btn[4].onclick = () => {append(components[5]); setTimeout(() => {
+    other[1]()
+  }, 200);}
 }

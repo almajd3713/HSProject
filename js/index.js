@@ -5,9 +5,10 @@
 
 import btnManager from "./tabManage.js"
 import peopleLoad from "./logic.js"
+import randomizer from "./randomizer.js"
 
 let btn;
-let paths = ["../components/heading.html", "../components/definition.html", "../components/who.html", "../components/symptoms.html", "../components/treatment.html"];
+let paths = ["../components/heading.html", "../components/definition.html", "../components/who.html", "../components/symptoms.html", "../components/treatment.html", "../components/questions.html"];
 
 let importComponents = async(paths) => {
   let components = await Promise.all(paths.map(async(path) => {
@@ -27,7 +28,7 @@ let startEvent = async() => {
   setTimeout(() => {
     document.querySelector(".heading-container").style.opacity = 1
     btn = document.querySelectorAll(".btn")
-    btnManager(btn, components, [peopleLoad])
+    btnManager(btn, components, [peopleLoad, randomizer])
   }, 100);
   document.removeEventListener("click", await startEvent)
 }
