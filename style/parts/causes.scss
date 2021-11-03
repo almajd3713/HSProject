@@ -1,0 +1,175 @@
+.causes {
+  display: grid;
+
+  position: relative;
+
+  justify-content: center;
+
+  grid-template-rows: repeat(1fr, 12);
+  grid-template-columns: 400px 400px;
+
+  grid-row-gap: 5px;
+  grid-column-gap: 300px;
+
+  font-size: 25px;
+
+  width: auto;
+
+  height: auto;
+
+  margin: auto auto;
+
+  &::after {
+    z-index: 5;
+    content: "";
+    border-left: 10px solid #071330;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+
+    width: 10px;
+    height: 85%;
+  }
+
+  & > * {
+    color: white;
+
+    font-family: sans-serif;
+  }
+
+  &--item {
+    position: inherit;
+
+    text-align: center;
+
+    background-color: #071330;
+    border: 2px solid #163680;
+
+    border-radius: 50px;
+
+    padding: 20px;
+
+    &::after {
+      z-index: 5;
+      content: "";
+      position: absolute;
+
+      width: 35%;
+      height: 10px;
+
+      background-color: #071330;
+    }
+
+    &::before {
+      z-index: 2;
+      content: "";
+      position: absolute;
+
+      width: 70px;
+      height: 70px;
+
+      background-color: #071330;
+
+      clip-path: circle(50% at 50% 50%);
+    }
+
+    &--left {
+      &::before {
+        left: 131%;
+        top: 20%;
+      }
+
+      &::after {
+        top: 42%;
+        right: -35%;
+      }
+    }
+
+    &--right {
+      &::before {
+        left: -45.5%;
+        top: 20%;
+      }
+
+      &::after {
+        top: 42%;
+        right: 100%;
+      }
+    }
+  }
+
+  &--num {
+    display: none;
+  }
+
+  &--header {
+    display: inline-block;
+    padding: 0 3px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+  }
+
+  &--desc {
+    font-size: 18px;
+    border-radius: 20px;
+    padding: 10px 5px;
+    text-align: center;
+    background-color: #163680;
+  }
+
+  &--content {
+    &::after {
+      z-index: 10;
+      content: "1";
+      position: absolute;
+
+      display: grid;
+      align-items: center;
+
+      width: 50px;
+      height: 50px;
+
+      top: 40px;
+      left: 50%;
+
+      background-color: #163680;
+
+      clip-path: circle(50% at 50% 50%);
+    }
+
+    @for $i from 1 through 6 {
+      &--#{$i}::after {
+        content: "#{$i}";
+      }
+    }
+
+    &--left::after {
+      top: 40px;
+      left: 133.5%;
+    }
+
+    &--right::after {
+      top: 40px;
+      left: -43%;
+    }
+  }
+
+  .emptycell-1 {
+    grid-area: 2 / 3 / 1 / 2;
+  }
+  .emptycell-2 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .emptycell-3 {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+  .emptycell-4 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  .emptycell-5 {
+    grid-area: 5 / 2 / 6 / 3;
+  }
+  .emptycell-6 {
+    grid-area: 6 / 1 / 7 / 2;
+  }
+}

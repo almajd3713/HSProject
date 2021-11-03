@@ -1,37 +1,98 @@
+.treatment-box {
+  display: grid;
+
+  justify-content: center;
+
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 400px 400px;
+
+  grid-row-gap: 60px;
+  grid-column-gap: 60px;
+
+  font-size: 25px;
+
+  width: auto;
+
+  margin: 30px auto;
+
+  & > * {
+    color: white;
+
+    font-family: sans-serif;
+
+    background-color: #0c4160;
+
+    padding: 0px 12px 12px 12px;
+  }
+}
+
 .treatment {
-    &--box {
-        outline: none;
-        padding-top: none;
+  border-radius: 10px;
+  border-top-right-radius: 30px;
+
+  transition: 0.5s all;
+
+  &:hover {
+    transform: translateY(-5%);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  }
+  &--header {
+    padding-left: 100px;
+    position: relative;
+
+    width: 97%;
+
+    background-color: #071330;
+
+    border-radius: 40px;
+    padding: 12px;
+    &::before {
+      z-index: 5;
+      content: "";
+      position: absolute;
+
+      width: 95px;
+      height: 95px;
+
+      top: -45%;
+      left: -50px;
+
+      background-color: #071330;
+
+      clip-path: circle(50% at 50% 50%);
     }
+  }
 
-    &--header {
-        position: relative;
-        height: 5rem;
-        &::before {
-            z-index: 5;
-            content: "";
-            width: 10rem;
-            height: 10rem;
-            clip-path: circle(50% at 50% 50%);
+  &--num {
+    z-index: 5;
+    position: absolute;
+    top: 15px;
+    right: 98.9%;
+    font-size: 2.5rem;
 
-            background: green;
-            position: absolute;
-            top: -5rem;
-            left: -5rem;
-            
-        }
-        background-color: red;
+    &::before {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      top: -53%;
+      left: -125%;
+
+      width: 50px;
+      height: 50px;
+
+      background-color: #738fa7;
+
+      clip-path: circle(50% at 50% 50%);
     }
+  }
 
-    // &--num {
+  &--heading {
+    padding: 45px;
+    font-size: 3rem;
+  }
 
-    // }
-
-    // &--heading {
-
-    // }
-
-    // &--content {
-
-    // }
+  &--content {
+    font-size: 20px;
+    margin: 10px 0 5px 35px;
+  }
 }

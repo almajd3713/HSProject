@@ -13,9 +13,24 @@ body {
   min-height: 100vh;
   background-color: #25223f;
   font-family: "Roboto", sans-serif;
+  padding-bottom: 10rem;
 }
 
 .container {
   width: 90vw;
-  margin: auto
+  margin: auto;
+}
+::-webkit-scrollbar {
+  width: 3rem;
+}
+
+::-webkit-scrollbar-track {
+  background: $col-primary
+}
+::-webkit-scrollbar-thumb {
+  transition: all .4s;
+  background: $col-primary
+}
+::-webkit-scrollbar-thumb:hover {
+  background: darken($col-primary, 10)
 }
