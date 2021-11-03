@@ -39,26 +39,22 @@
 }
 
 .arrow {
+  cursor: pointer;
   width: 8rem;
   aspect-ratio: 1/1;
-  background-color: red;
+  background-color: lighten($col-tertiary, 20);
   display: inline-block;
   position: relative;
+  transition: all .3s;
 
-  // &::before {
-  //   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-  //   content: "";
-  //   display: inline-block;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   background-color: green;
-  // }
-  // &:nth-of-type(1) {
-  //  &::before {
-  //    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
-  //  } 
-  // }
+  &:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 2rem 3rem rgba(black, .35)
+  }
+  &:active {
+    transform: translateY(-.5rem);
+    box-shadow: 0 .75rem 1.5rem rgba(black, .35);
+  }
 }
 .left {
   clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
@@ -73,6 +69,7 @@
   padding: 2rem;
   background-color: $col-secondary;
   height: 38rem;
+  padding-bottom: 5rem;
   box-shadow: 0 2rem 3rem rgba(black, .35);
   .question {
     font-size: 3rem;
@@ -83,6 +80,7 @@
    padding: 2rem 3rem; 
    background-color: $col-tertiary;
    border-radius: 1rem;
+   cursor: pointer;
    box-shadow: 0 .5rem 1rem rgba(black, .35);
    transition: all .3s;
    &:not(:last-child) {

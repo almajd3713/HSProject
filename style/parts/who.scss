@@ -9,8 +9,6 @@
   }
   .where-box {
     position: absolute;
-    top: 10rem;
-    left: 10rem;
     width: 20rem;
     font-size: 1.5rem;
     letter-spacing: .05rem;
@@ -19,14 +17,36 @@
     &::before {
       z-index: -1;
       content: "";
-      width: 30rem;
-      height: 2rem;
       clip-path: polygon(0% 20%, 85% 20%, 85% 0%, 100% 50%, 85% 100%, 85% 80%, 0% 80%);
       background: green;
       position: absolute;
+
+    }
+  }
+  .one {
+    top: 10rem;
+    left: 10rem;
+    &::before {
       top: -2rem;
       left: 20rem;
+      width: 30rem;
+      height: 2rem;
       transform: rotate(-15deg)
+    }
+  }
+  .two {
+    top: 20rem;
+    right: 10rem;
+  }
+  .three {
+    top: 38rem;
+    left: 15rem;
+    &::before {
+      width: 28rem;
+      height: 2rem;
+      top: -2rem;
+      left: 5rem;
+      transform: rotate(-35deg)
     }
   }
 

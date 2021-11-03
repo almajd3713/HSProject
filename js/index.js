@@ -9,7 +9,7 @@ import randomizer from "./randomizer.js"
 import questManag from "./questionLogic.js"
 
 let btn;
-let paths = ["../components/heading.html", "../components/definition.html", "../components/who.html", "../components/symptoms.html", "../components/treatment.html", "../components/questions.html"];
+let paths = ["../components/heading.html", "../components/definition.html", "../components/who.html", "../components/causes.html", "../components/symptoms.html", "../components/treatment.html", "../components/questions.html"];
 
 let importComponents = async(paths) => {
   let components = await Promise.all(paths.map(async(path) => {

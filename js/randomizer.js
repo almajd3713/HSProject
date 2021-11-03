@@ -32,7 +32,7 @@ export default () => {
   btn.addEventListener("click", e => {
     for(let i = 0; i <= 100; i ++) {
       setTimeout(() => {
-        box.textContent = rando(list).value
+        box.textContent = getName()
       }, i*50);
     }
   })

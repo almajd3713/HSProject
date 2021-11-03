@@ -1,7 +1,7 @@
 
 .heading-container {
   height: 100vh;
-  transition: all 1s;
+  transition: all 5s ease-out;
   opacity: 0;
 }
 
@@ -32,7 +32,7 @@
     width: 50%;
     opacity: .05;
   }
-  filter: grayscale(100%);
+  // filter: grayscale(100%);
 }
 
 nav {
@@ -47,7 +47,7 @@ nav {
   background-color: #cccccc;
   border-radius: 2rem;
 
-  width: 80%;
+  width: 60%;
 
   .btn {
     &:link, &:visited {
